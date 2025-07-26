@@ -28,7 +28,7 @@ how Rust manages this parking system to keep your data safe and accessible.
 Your program has access to two different parking systems, each with its own
 rules and benefits.
 
-![Stack vs Heap Overview](diagrams/stack-vs-heap-overview.excalidraw)
+![Stack vs Heap Overview](diagrams/stack-vs-heap-overview.png)
 
 ### The Stack: Valet Parking
 
@@ -63,7 +63,7 @@ Stack Memory (growing downward):
 └─────────────────┘
 ```
 
-![Stack Memory Growth](diagrams/stack-memory-growth.excalidraw)
+![Stack Memory Growth](diagrams/stack-memory-growth.png)
 
 **Stack properties:**
 
@@ -106,7 +106,7 @@ Stack frame visualization:
 └─────────────────────────┘
 ```
 
-![Stack Frame Details](diagrams/stack-frame-details.excalidraw)
+![Stack Frame Details](diagrams/stack-frame-details.png)
 
 ### The Heap: Self-Park Garage
 
@@ -169,7 +169,7 @@ STACK                          HEAP
 └──────────────┘              └──────────────────┘
 ```
 
-![Pointer Connections](diagrams/pointer-connections.excalidraw)
+![Pointer Connections](diagrams/pointer-connections.png)
 
 ## Rust's Memory Management
 
@@ -285,7 +285,7 @@ STACK (metadata)              HEAP (actual data)
                              └─────────────────────┘
 ```
 
-![Metadata Visualization](diagrams/metadata-visualization.excalidraw)
+![Metadata Visualization](diagrams/metadata-visualization.png)
 
 Comparison table:
 
