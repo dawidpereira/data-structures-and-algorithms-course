@@ -40,7 +40,7 @@ distance:
 - **Driving**: Time increases, but less than walking
 - **Flying**: Most time is spent at airports (constant), not traveling
 
-![Big O Growth Comparison](diagrams/big-o-growth-comparison.png)
+![Algorithm Complexity Race](diagrams/algorithm-complexity-race.png)
 
 In programming terms:
 
@@ -718,7 +718,7 @@ fn demonstrate_vec_growth() {
    - Small dataset? Simple O(n²) might be fine
    - Massive dataset? You need O(n) or O(log n)
 
-![Algorithm Complexity Race](diagrams/algorithm-complexity-race.png)
+![Big O Growth Comparison](diagrams/big-o-growth-comparison.png)
 
 ## Common Complexity Analysis Mistakes
 
