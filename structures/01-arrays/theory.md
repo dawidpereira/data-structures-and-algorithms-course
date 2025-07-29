@@ -1,5 +1,11 @@
 # Array Theory
 
+## Prerequisites
+
+- [What Are Data Structures?](../../00-fundamentals/what-are-data-structures.md)
+- [Memory Model](../../00-fundamentals/memory-model.md)
+- [Big O Notation](../../00-fundamentals/big-o-notation.md)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -48,38 +54,16 @@ a memory location that can hold one piece of data.
 
 ### Memory Layout
 
-Think of computer memory as a massive apartment building. An array is like
-renting an entire floor where all apartments are:
+Arrays store elements in contiguous memory locations, like apartments on the
+same floor of a building - all the same size and right next to each other.
+This enables constant-time access through simple address calculation.
 
-- The same size
-- Numbered sequentially
-- Right next to each other
-
-When you create an array of 10 integers, you're essentially saying "I need
-10 consecutive apartments, each big enough for one integer."
-
-### Indexing and Access
-
-Just like finding apartment 305 (3rd floor, 5th apartment), accessing array
-elements is simple math:
-
-```
-Memory address = Starting address + (Index × Element size)
-```
-
-If your array starts at memory address 1000 and each integer takes 4 bytes:
-
-- Element 0: Address 1000
-- Element 1: Address 1004
-- Element 2: Address 1008
-- And so on...
-
-This direct calculation is why arrays have O(1) access time - no searching
-needed!
+For detailed understanding of memory layout, alignment, and allocation, see
+[Memory Management Guide](../implementations/rust/docs/memory-management.md).
 
 ### Size and Capacity
 
-Arrays come in two flavors:
+Arrays come in two flavors (see [implementations](./implementations/rust/src/) for code):
 
 **Static Arrays** (like a pre-built apartment complex):
 
@@ -192,11 +176,12 @@ vec.push(5); // Need to grow!
 
 - **2x growth**: Simple but can waste memory (Java, Python)
 - **1.5x growth**: Better memory usage (C++)
-- **Rust's Vec**: Starts at 0, then 4, then doubles
+- **Rust's Vec**: 0 → 1 → 2 → 4 → 8 → 16 → 32 → 64 → ...
 
 This is why push() is O(1) amortized - most pushes are cheap, but
 occasionally you pay O(n) to resize. Over many operations, it averages
-out to O(1) per push.
+out to O(1) per push. See [Dynamic Array Strategies](./implementations/rust/docs/dynamic-array-strategies.md)
+for detailed analysis.
 
 ![Dynamic Array Resizing Process](./diagrams/dynamic-array-resize.png)
 
@@ -276,28 +261,22 @@ Arrays are perfect when you:
 - Want cache-efficient operations
 - Need to store elements of the same type
 
-Common use cases:
-
-- Storing pixel data in images
-- Implementing other data structures (heaps, hash tables)
-- Buffers for I/O operations
-- Lookup tables
-- Mathematical computations
+For detailed real-world applications across different domains, see
+[Array Use Cases](./use-cases.md).
 
 ## Common Pitfalls
 
-1. **Out-of-bounds access**: Trying to access index 10 in a 10-element
-array (indices go 0-9)
+Arrays seem simple but have several common pitfalls. For a comprehensive
+guide to avoiding mistakes in array implementations, see
+[Common Array Implementation Pitfalls](./implementations/rust/docs/common-pitfalls.md).
 
-2. **Not considering growth**: Using static arrays when size varies
+Key pitfalls to remember:
 
-3. **Frequent insertions at the beginning**: Arrays aren't good for this -
-consider a different structure
-
-4. **Memory fragmentation**: Large arrays might fail to allocate even with
-enough total memory
-
-5. **Forgetting zero-indexing**: First element is at index 0, not 1
+- Out-of-bounds access (indices 0 to n-1)
+- Not considering growth needs
+- Frequent insertions at the beginning (O(n) operation)
+- Memory fragmentation with large arrays
+- Zero-indexing confusion
 
 ## Key Takeaways
 
@@ -310,3 +289,12 @@ enough total memory
 
 Remember: Arrays are like parking lots - great for direct access when you
 know the spot number, but reorganizing the cars is a pain!
+
+## Next Steps
+
+Now that you understand array theory:
+
+1. **[Explore Use Cases](./use-cases.md)** - See arrays in real-world applications
+2. **[Deep Dive: Memory Management](./implementations/rust/docs/memory-management.md)** - Understand the low-level details
+3. **[Start Implementing](./exercises/rust/docs/fixed-array-guide.md)** - Build your own array from scratch
+4. **[Learn Dynamic Arrays](./implementations/rust/docs/dynamic-array-strategies.md)** - Understand growth strategies
