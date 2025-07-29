@@ -1,5 +1,9 @@
 # Array Use Cases
 
+## Prerequisites
+
+- [Array Theory](./theory.md) - Understanding of basic array concepts
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -283,3 +287,11 @@ applications.
 
 Remember: When in doubt, start with an array. You can always switch to a
 more complex structure later if needed!
+
+## Next Steps
+
+After exploring use cases:
+
+1. **[Memory Management](./implementations/rust/docs/memory-management.md)** - Understand how arrays work at the memory level
+2. **[Start Building](./exercises/rust/docs/fixed-array-guide.md)** - Implement your own array
+3. **[Dynamic Arrays](./implementations/rust/docs/dynamic-array-strategies.md)** - Learn about growable arrays

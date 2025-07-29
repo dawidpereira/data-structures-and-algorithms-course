@@ -42,47 +42,74 @@ Before diving into arrays, make sure you're comfortable with:
 - [Memory Model](../00-fundamentals/memory-model.md) - especially stack vs heap
 - [Big O Notation](../00-fundamentals/big-o-notation.md) - for complexity analysis
 
-## Structure
+## Learning Path
 
-This section is organized to build your understanding progressively:
+Follow this recommended path through the documentation:
 
-### Theory First
+### 📚 Phase 1: Theory and Concepts
 
-1. **[Core Theory](./theory.md)** - Understand how arrays work
-   - Memory layout and allocation
+1. **[Array Theory](./theory.md)** - Core concepts and understanding
+   - What arrays are and how they work
+   - Memory layout and indexing
    - Static vs dynamic arrays
    - Time and space complexity
-   - Operations and their costs
 
-2. **[Use Cases](./use-cases.md)** - See arrays in action
-   - Image processing
+2. **[Real-World Use Cases](./use-cases.md)** - Where arrays shine
+   - Image and graphics processing
+   - Audio and signal processing
    - Game development
    - Scientific computing
-   - System programming
 
-### Practical Implementation
+3. **[Memory Management Deep Dive](./implementations/rust/docs/memory-management.md)**
+   - Stack vs heap allocation
+   - Memory layout and alignment
+   - Safety considerations
 
-3. **[Rust Implementation](./implementations/rust/)** - Hands-on coding
-   - Basic array operations
-   - Dynamic arrays (Vectors)
-   - Custom implementations
+### 🔨 Phase 2: Implementation
+
+4. **[Fixed Array Guide](./exercises/rust/docs/fixed-array-guide.md)** - Build from scratch
+   - Step-by-step implementation
+   - Memory allocation basics
+   - Safety and drop handling
+
+5. **[Dynamic Array Strategies](./implementations/rust/docs/dynamic-array-strategies.md)**
+   - Growth and shrink strategies
+   - Avoiding thrashing
    - Performance considerations
 
-### Algorithms Covered
+6. **[Dynamic Array Guide](./exercises/rust/docs/dynamic-array-guide.md)** - Growable arrays
+   - Building on fixed arrays
+   - Implementing growth/shrink
+   - Iterator support
 
-4. **[Array Algorithms](./algorithms/)**
-   - Linear search
-   - Binary search
-   - Sorting algorithms
-   - Two-pointer techniques
-   - Sliding window
+### 📖 Reference Materials
 
-### Problem-Solving
+**Implementation References:**
 
-5. **Practice Problems** (by difficulty)
-   - **Easy**: Array reversal, finding maximum
-   - **Medium**: Rotating arrays, product except self
-   - **Hard**: Median of sorted arrays
+- [Fixed Array Implementation](./implementations/rust/src/core.rs)
+- [Dynamic Array Implementation](./implementations/rust/src/dynamic_array.rs)
+
+**Exercise Files:**
+
+- [Fixed Array Exercise](./exercises/rust/src/fixed_array_exercise.rs)
+- [Dynamic Array Exercise](./exercises/rust/src/dynamic_array_exercise.rs)
+
+**Additional Documentation:**
+
+- [README files in each docs folder](./implementations/rust/docs/README.md)
+
+### 🚀 Advanced Topics
+
+**[Array Algorithms](./algorithms/)**
+
+- Binary search
+- Sorting algorithms
+- Two-pointer techniques
+
+**Practice Problems**
+
+- Located in `problems/` directory
+- Organized by difficulty
 
 ## Visual Learning
 
