@@ -68,10 +68,11 @@ one by one from the beginning!
 
 ## Understanding Binary Search
 
-### Critical Requirement: Data MUST Be Sorted!
+### Critical Requirement: Data MUST Be Sorted
 
 Binary search only works on **sorted data**. This is absolutely essential
 because the algorithm relies on knowing that:
+
 - All elements to the left of any position are smaller (or equal)
 - All elements to the right of any position are larger (or equal)
 
