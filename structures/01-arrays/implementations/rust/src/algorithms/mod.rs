@@ -8,3 +8,4 @@ pub mod bubble_sort;
 
 // Re-export commonly used traits
 pub use binary_search::BinarySearchable;
+pub use linear_search::LinearSearchable;
