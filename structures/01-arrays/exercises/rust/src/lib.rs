@@ -10,3 +10,4 @@ pub mod fixed_array_exercise;
 
 // Algorithm exercises
 pub mod binary_search_exercise;
+pub mod search_algorithms_exercise;
